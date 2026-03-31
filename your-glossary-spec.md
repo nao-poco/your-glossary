@@ -48,12 +48,12 @@ Claude Code 用の単語帳カスタム Slash コマンド
 ### 保存先
 
 ```
-~/.word-glossary/glossary.json
+~/.your-glossary/glossary.json
 ```
 
-- `~/.word-glossary/` ディレクトリが存在しない場合は自動作成する
+- `~/.your-glossary/` ディレクトリが存在しない場合は自動作成する
 - ホームディレクトリに保存するため、全プロジェクトで共通の単語帳として使える
-- Windows の場合は `C:\Users\<ユーザー名>\.word-glossary\` に保存される
+- Windows の場合は `C:\Users\<ユーザー名>\.your-glossary\` に保存される
 
 ### データ構造
 
@@ -172,7 +172,7 @@ cp -r your-glossary/.claude/commands/ /path/to/project/.claude/commands/
 - ツールの概要・スクリーンショット
 - インストール方法
 - 各コマンドの使い方と出力例
-- 保存先がホームディレクトリ（`~/.word-glossary/`）である旨の説明
+- 保存先がホームディレクトリ（`~/.your-glossary/`）である旨の説明
 - ライセンス情報
 
 ## 将来的な拡張案（スコープ外）

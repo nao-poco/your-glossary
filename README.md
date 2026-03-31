@@ -60,7 +60,7 @@ Open Claude Code and try:
 /word add middleware
 ```
 
-Claude will explain the term and save it to `~/.word-glossary/glossary.json` (shared across all projects).
+Claude will explain the term and save it to `~/.your-glossary/glossary.json` (shared across all projects).
 
 ## Commands
 
@@ -120,10 +120,10 @@ Generates a `glossary-export.md` file you can share or reference.
 Your glossary is saved locally at:
 
 ```
-~/.word-glossary/glossary.json
+~/.your-glossary/glossary.json
 ```
 
-This is stored in your home directory (`~`), so it's shared across all projects automatically. On Windows, this is typically `C:\Users\<your-name>\.word-glossary\`.
+This is stored in your home directory (`~`), so it's shared across all projects automatically. On Windows, this is typically `C:\Users\<your-name>\.your-glossary\`.
 
 ## Requirements
 
