@@ -16,7 +16,23 @@ A personal glossary tool for [Claude Code](https://docs.anthropic.com/en/docs/cl
 
 ### 1. Copy the command files
 
-Copy the `.claude/commands/` directory into your project:
+There are two ways to install: **user-level** (recommended) or **project-level**.
+
+#### Option A: User-level install (all projects for you)
+
+Install to `~/.claude/commands/` to use `/word` commands in **any project** on your machine. Only you can use them.
+
+```bash
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/your-glossary.git
+
+# Copy commands to your user directory
+cp -r your-glossary/.claude/commands/ ~/.claude/commands/
+```
+
+#### Option B: Project-level install (one project for everyone)
+
+Install to `<project>/.claude/commands/` to share the commands with **everyone working on that project**. Only works in that project.
 
 ```bash
 # Clone the repo
@@ -26,11 +42,19 @@ git clone https://github.com/YOUR_USERNAME/your-glossary.git
 cp -r your-glossary/.claude/commands/ /path/to/your-project/.claude/commands/
 ```
 
-Or manually download the files from `.claude/commands/` and place them in your project's `.claude/commands/` directory.
+> **User-level vs Project-level**
+> | | User-level (`~/.claude/commands/`) | Project-level (`<project>/.claude/commands/`) |
+> |---|---|---|
+> | Scope | All projects on your machine | That project only |
+> | Who can use | You only | Anyone who clones the project |
+> | Git tracked | No | Yes (if committed) |
+> | Best for | Personal use | Team sharing |
+>
+> **Windows note**: `~` refers to your user home directory. On Windows, this is typically `C:\Users\<your-name>\.claude\commands\`.
 
 ### 2. Start using it
 
-Open Claude Code in your project and try:
+Open Claude Code and try:
 
 ```
 /word add middleware

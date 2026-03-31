@@ -87,14 +87,25 @@ Claude Code 用の単語帳カスタム Slash コマンド
 
 ### Claude Code カスタム Slash コマンド
 
-プロジェクトの `.claude/commands/` ディレクトリに Markdown ファイルとして配置する。
+Markdown ファイルとして配置する。配置先は2箇所から選べる:
+
+- **ユーザー単位**: `~/.claude/commands/` — 全プロジェクトで使える（自分専用）
+- **プロジェクト単位**: `<プロジェクト>/.claude/commands/` — そのプロジェクト内でのみ使える（チーム共有可能）
 
 ```
-.claude/
+# ユーザー単位の場合
+~/.claude/
   commands/
     word-add.md      # /word add コマンド
     word-list.md     # /word list コマンド
     word-remove.md   # /word remove コマンド
+
+# プロジェクト単位の場合
+<プロジェクト>/.claude/
+  commands/
+    word-add.md
+    word-list.md
+    word-remove.md
 ```
 
 各 `.md` ファイルには、Claude Code に対するプロンプト（指示文）を記述する。
@@ -125,8 +136,31 @@ your-glossary/
 
 ### インストール方法（README に記載する内容）
 
-1. リポジトリをクローンまたは `.claude/commands/` 内の 3 ファイルを自分のプロジェクトにコピー
-2. Claude Code を起動し、`/word add <単語>` で利用開始
+2つのインストール方法を案内する:
+
+#### ユーザー単位（推奨）
+
+- コマンドファイルを `~/.claude/commands/` にコピーする
+- 自分のマシン上の **すべてのプロジェクト** で `/word` コマンドが使えるようになる
+- 自分だけが使える（他の人には影響しない）
+- Git の管理対象にならない
+
+```bash
+cp -r your-glossary/.claude/commands/ ~/.claude/commands/
+```
+
+#### プロジェクト単位
+
+- コマンドファイルを `<プロジェクト>/.claude/commands/` にコピーする
+- **そのプロジェクト内でのみ** 使える
+- Git にコミットすれば、プロジェクトをクローンした **全員が使える**
+- チームで共有したい場合に向いている
+
+```bash
+cp -r your-glossary/.claude/commands/ /path/to/project/.claude/commands/
+```
+
+いずれの方法でも、Claude Code を起動し `/word add <単語>` で利用開始できる
 
 ### README に含める情報
 
