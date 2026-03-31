@@ -4,11 +4,11 @@ A personal glossary tool for [Claude Code](https://docs.anthropic.com/en/docs/cl
 
 ## Features
 
-- `/word add <term>` — Look up a term and save it to your glossary
-- `/word list` — View all saved terms
-- `/word remove <term>` — Remove a term from your glossary
-- `/word search <keyword>` — Search through saved terms
-- `/word export` — Export your glossary as a Markdown file
+- `/word-add <term>` — Look up a term and save it to your glossary
+- `/word-list` — View all saved terms
+- `/word-remove <term>` — Remove a term from your glossary
+- `/word-search <keyword>` — Search through saved terms
+- `/word-export` — Export your glossary as a Markdown file
 
 **Language-aware**: Definitions are generated in the language you're working in (English, Japanese, etc.)
 
@@ -57,7 +57,7 @@ cp -r your-glossary/.claude/commands/ /path/to/your-project/.claude/commands/
 Open Claude Code and try:
 
 ```
-/word add middleware
+/word-add middleware
 ```
 
 Claude will explain the term and save it to `~/.your-glossary/glossary.json` (shared across all projects).
@@ -67,7 +67,7 @@ Claude will explain the term and save it to `~/.your-glossary/glossary.json` (sh
 ### Add a term
 
 ```
-/word add decorator
+/word-add decorator
 ```
 
 ```
@@ -80,7 +80,7 @@ or classes. In Python, decorators use the @ symbol before a function definition.
 ### List all terms
 
 ```
-/word list
+/word-list
 ```
 
 ```
@@ -94,7 +94,7 @@ or classes. In Python, decorators use the @ symbol before a function definition.
 ### Remove a term
 
 ```
-/word remove decorator
+/word-remove decorator
 ```
 
 ```
@@ -104,13 +104,13 @@ or classes. In Python, decorators use the @ symbol before a function definition.
 ### Search terms
 
 ```
-/word search function
+/word-search function
 ```
 
 ### Export to Markdown
 
 ```
-/word export
+/word-export
 ```
 
 Generates a `glossary-export.md` file you can share or reference.

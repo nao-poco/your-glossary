@@ -9,7 +9,7 @@ Claude Code 用の単語帳カスタム Slash コマンド
 
 ## コマンド一覧
 
-### `/word add <単語>`
+### `/word-add <単語>`
 
 - 指定した単語の意味を Claude の知識ベースで生成し、ローカルファイルに保存する
 - 既に登録済みの単語の場合は、その旨を通知して上書きするか確認する
@@ -21,7 +21,7 @@ Claude Code 用の単語帳カスタム Slash コマンド
   Pythonでは @記号を使って関数の前に記述する。
   ```
 
-### `/word list`
+### `/word-list`
 
 - 保存済みの全単語とその意味を一覧表示する
 - 登録件数が 0 件の場合はその旨を表示する
@@ -34,13 +34,36 @@ Claude Code 用の単語帳カスタム Slash コマンド
   3. idempotent — 同じ操作を何度実行しても結果が変わらない性質。…
   ```
 
-### `/word remove <単語>`
+### `/word-remove <単語>`
 
 - 指定した単語をリストから削除する
 - 存在しない単語を指定した場合はエラーメッセージを表示する
 - 出力例:
   ```
   🗑️ "decorator" を削除しました
+  ```
+
+### `/word-search <キーワード>`
+
+- 保存済みの単語から、キーワードに一致する単語を検索して表示する
+- 単語名・意味の両方を検索対象とする
+- 該当する単語がない場合はその旨を表示する
+- 出力例:
+  ```
+  🔍 "function" の検索結果（2件）
+  ---
+  1. decorator — 関数やクラスの振る舞いを変更・拡張するための構文。…
+  2. callback — 他の関数に引数として渡される関数。…
+  ```
+
+### `/word-export`
+
+- 保存済みの全単語を Markdown 形式に変換し、ファイルとして保存する
+- 出力先: カレントディレクトリに `glossary-export.md` を生成する
+- 登録件数が 0 件の場合はその旨を表示する
+- 出力例:
+  ```
+  📤 単語帳を glossary-export.md にエクスポートしました（3件）
   ```
 
 ## データ仕様
@@ -97,9 +120,9 @@ Markdown ファイルとして配置する。配置先は2箇所から選べる:
 # ユーザー単位の場合
 ~/.claude/
   commands/
-    word-add.md      # /word add コマンド
-    word-list.md     # /word list コマンド
-    word-remove.md   # /word remove コマンド
+    word-add.md      # /word-add コマンド
+    word-list.md     # /word-list コマンド
+    word-remove.md   # /word-remove コマンド
 
 # プロジェクト単位の場合
 <プロジェクト>/.claude/
@@ -165,7 +188,7 @@ cp -r your-glossary/.claude/commands/ ~/.claude/commands/
 cp -r your-glossary/.claude/commands/ /path/to/project/.claude/commands/
 ```
 
-いずれの方法でも、Claude Code を起動し `/word add <単語>` で利用開始できる
+いずれの方法でも、Claude Code を起動し `/word-add <単語>` で利用開始できる
 
 ### README に含める情報
 
