@@ -24,7 +24,7 @@ Install to `~/.claude/commands/` to use `/word` commands in **any project** on y
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/your-glossary.git
+git clone https://github.com/nao-poco/your-glossary.git
 
 # Copy commands to your user directory
 cp -r your-glossary/.claude/commands/ ~/.claude/commands/
@@ -36,7 +36,7 @@ Install to `<project>/.claude/commands/` to share the commands with **everyone w
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/your-glossary.git
+git clone https://github.com/nao-poco/your-glossary.git
 
 # Copy commands to your project
 cp -r your-glossary/.claude/commands/ /path/to/your-project/.claude/commands/
