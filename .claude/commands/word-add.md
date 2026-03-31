@@ -10,8 +10,8 @@ $ARGUMENTS に追加したい単語が入ります。
 
 1. `$ARGUMENTS` が空の場合は「追加したい単語を指定してください。例: /word-add decorator」と表示して終了してください。
 
-2. プロジェクトルートの `.word-glossary/glossary.json` を読み込んでください。
-   - ファイルが存在しない場合は、`.word-glossary/` ディレクトリごと作成し、以下の初期データを用意してください：
+2. プロジェクトルートの `.your-glossary/glossary.json` を読み込んでください。
+   - ファイルが存在しない場合は、`.your-glossary/` ディレクトリごと作成し、以下の初期データを用意してください：
      ```json
      {
        "version": "1.0",
@@ -37,7 +37,7 @@ $ARGUMENTS に追加したい単語が入ります。
    }
    ```
 
-6. 更新した JSON を `.word-glossary/glossary.json` に保存してください。
+6. 更新した JSON を `.your-glossary/glossary.json` に保存してください。
 
 7. 以下の形式で結果を表示してください：
    ```

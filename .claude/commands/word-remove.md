@@ -10,7 +10,7 @@ $ARGUMENTS に削除したい単語が入ります。
 
 1. `$ARGUMENTS` が空の場合は「削除したい単語を指定してください。例: /word-remove decorator」と表示して終了してください。
 
-2. プロジェクトルートの `.word-glossary/glossary.json` を読み込んでください。
+2. プロジェクトルートの `.your-glossary/glossary.json` を読み込んでください。
    - ファイルが存在しない場合は「❌ 単語帳がまだ作成されていません。削除する単語がありません。」と表示して終了してください。
 
 3. `words` 配列の中から、`term` が `$ARGUMENTS` と一致するエントリを検索してください（大文字小文字は区別しない）。
@@ -18,7 +18,7 @@ $ARGUMENTS に削除したい単語が入ります。
 
 4. 一致するエントリを `words` 配列から削除してください。
 
-5. 更新した JSON を `.word-glossary/glossary.json` に保存してください。
+5. 更新した JSON を `.your-glossary/glossary.json` に保存してください。
 
 6. 以下の形式で結果を表示してください：
    ```

@@ -36,7 +36,7 @@ Open Claude Code in your project and try:
 /word add middleware
 ```
 
-Claude will explain the term and save it to `.word-glossary/glossary.json` in your project.
+Claude will explain the term and save it to `.your-glossary/glossary.json` in your project.
 
 ## Commands
 
@@ -96,15 +96,15 @@ Generates a `glossary.md` file you can share or reference.
 Your glossary is saved locally at:
 
 ```
-<project-root>/.word-glossary/glossary.json
+<project-root>/.your-glossary/glossary.json
 ```
 
 ### Git tracking
 
 Choose what works for you:
 
-- **Track it** (share glossary with your team): commit `.word-glossary/` as-is
-- **Ignore it** (keep it personal): add `.word-glossary/` to your `.gitignore`
+- **Track it** (share glossary with your team): commit `.your-glossary/` as-is
+- **Ignore it** (keep it personal): add `.your-glossary/` to your `.gitignore`
 
 ## Requirements
 
