@@ -113,7 +113,7 @@ or classes. In Python, decorators use the @ symbol before a function definition.
 /word export
 ```
 
-Generates a `glossary.md` file you can share or reference.
+Generates a `glossary-export.md` file you can share or reference.
 
 ## Data Storage
 

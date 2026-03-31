@@ -172,7 +172,7 @@ cp -r your-glossary/.claude/commands/ /path/to/project/.claude/commands/
 - ツールの概要・スクリーンショット
 - インストール方法
 - 各コマンドの使い方と出力例
-- `glossary.json` を `.gitignore` に入れるかどうかの説明
+- 保存先がホームディレクトリ（`~/.word-glossary/`）である旨の説明
 - ライセンス情報
 
 ## 将来的な拡張案（スコープ外）
