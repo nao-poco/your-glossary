@@ -48,11 +48,12 @@ Claude Code 用の単語帳カスタム Slash コマンド
 ### 保存先
 
 ```
-<プロジェクトルート>/.your-glossary/glossary.json
+~/.word-glossary/glossary.json
 ```
 
-- `.your-glossary/` ディレクトリが存在しない場合は自動作成する
-- `.gitignore` に追加するかどうかはユーザーの判断に委ねる（README で案内）
+- `~/.word-glossary/` ディレクトリが存在しない場合は自動作成する
+- ホームディレクトリに保存するため、全プロジェクトで共通の単語帳として使える
+- Windows の場合は `C:\Users\<ユーザー名>\.word-glossary\` に保存される
 
 ### データ構造
 

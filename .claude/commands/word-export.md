@@ -4,7 +4,7 @@
 
 ## 手順
 
-1. プロジェクトルートの `.your-glossary/glossary.json` を読み込んでください。
+1. `~/.word-glossary/glossary.json` を読み込んでください（`~` はユーザーのホームディレクトリ）。
    - ファイルが存在しない場合は「📖 単語帳がまだ作成されていません。エクスポートする単語がありません。」と表示して終了してください。
 
 2. `words` 配列が空（0件）の場合は「📖 単語帳は空です。エクスポートする単語がありません。」と表示して終了してください。
@@ -38,10 +38,10 @@
 
    - `addedAt` の日時順（古い順）で並べてください。
 
-4. 生成した Markdown を `.your-glossary/glossary-export.md` に保存してください。
+4. 生成した Markdown を `~/.word-glossary/glossary-export.md` に保存してください。
 
 5. 以下の形式で結果を表示してください：
    ```
    📝 単語帳を Markdown にエクスポートしました（<件数>件）
-   保存先: .your-glossary/glossary-export.md
+   保存先: ~/.word-glossary/glossary-export.md
    ```
